@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import bs4 as bs
 import requests
 
-import utility as util
+from utility import save_sp500_tickers
 
 # 1. getting S&P 500 companies ticker list
 # 2. use yfinance api module to download all historical data
@@ -44,7 +44,7 @@ import utility as util
 # hist['Close'].plot(figsize=(20,10))
 
 if __name__ == '__main__':
-    stocks = util.save_sp500_tickers()
+    stocks = save_sp500_tickers()
     df_full = pd.DataFrame()
 
     print(type(stocks))
